@@ -9,6 +9,8 @@ class Db{
     private static $pwd = "";
     private static $dsn;
     public static $con;
+    public static $msg;
+    public static $error;
 
 
     public static function connect() {
@@ -22,6 +24,7 @@ class Db{
             echo $e->getMessage();
         }
     }
+
 
 
 }
