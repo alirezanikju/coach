@@ -15,3 +15,14 @@ if(isset($_POST['adminLogin'])){
     }
 
 }
+
+if(isset($_POST['addSliderPhoto'])){
+    $imgName = $_FILES['sliderPhoto']['name'];
+    $imgTmp = $_FILES['sliderPhoto']['tmp_name'];
+    $imgType = $_FILES['sliderPhoto']['type'];
+
+    $slider = new Admin();
+    $slider->addSlider($imgName,$imgTmp,$imgType);
+
+
+}

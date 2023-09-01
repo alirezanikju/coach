@@ -13,6 +13,7 @@ class Db{
     public static $error;
 
 
+    //connect function
     public static function connect() {
 
         try{
@@ -26,11 +27,16 @@ class Db{
     }
 
 
+    //prepare function
+    public static function prepare($sql){
+
+        return self::connect()->prepare($sql);
+
+    }
+
+
 
 }
-
-Db::connect();
-
 
 
 
