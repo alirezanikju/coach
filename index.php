@@ -1,3 +1,11 @@
+<?php
+require_once "autoload.php";
+
+$slider = new Slider();
+$sliders = $slider->getSlider();
+?>
+
+
 <!doctype html>
 <html dir="rtl" lang="en">
   <head>
@@ -107,10 +115,10 @@
         <div class="row">
           <div class="col-12 margin-tp"  dir="ltr"  >
             <div class="slide-one-item home-slider owl-carousel" style="float: right !important;">
-              <img src="images/coach_hero_1.jpg" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
-              <img src="images/coach_hero_2.jpg" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
-              <img src="images/coach_hero_3.jpg" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
-            </div>
+              <?php foreach($sliders as $slider){ ?>
+            <img src="admin/sliderImg/<?php echo $slider['imgName']; ?>" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
+          <?php } ?>  
+          </div>
           </div>
         </div>
       </div>

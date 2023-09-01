@@ -21,7 +21,7 @@ if(isset($_POST['addSliderPhoto'])){
     $imgTmp = $_FILES['sliderPhoto']['tmp_name'];
     $imgType = $_FILES['sliderPhoto']['type'];
 
-    $slider = new Admin();
+    $slider = new Slider();
     $slider->addSlider($imgName,$imgTmp,$imgType);
 
 
