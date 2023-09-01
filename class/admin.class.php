@@ -17,9 +17,9 @@ class Admin
         if ($email == $this->adminEmail && $pwd == $this->adminPwd) {
             session_start();
             $_SESSION['admin'] = $email;
-            return true;
+            Db::$msg = "ورود به بخش ادمین با موفقیت صورت گرفت";
         } else {
-            return false;
+            Db::$error = "مشکلی در ورود به بخش ادمین پیش آمد";
         }
     }
 
