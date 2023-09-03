@@ -51,4 +51,19 @@ class Slider{
 
 
 
+    public function removeSlider($slideId){
+        $sql = "DELETE FROM slider WHERE id=:id";
+        $result = Db::prepare($sql);
+        $result->bindValue(":id",$slideId);
+if($result->execute()){
+    Db::$msg= "اسلاید با موفقیت حذف شد";
+
+}else{
+    Db::$error = "مشکلی در حذف اسلاید پیش آمد ";
+
+}
+
+
+    }
+
 }

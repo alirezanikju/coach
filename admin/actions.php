@@ -22,3 +22,11 @@ if(isset($_POST['addSliderPhoto'])){
 
 
 }
+
+
+if(isset($_GET['deleteSlideId'])){
+    $slideId = $_GET['deleteSlideId'];
+
+    $slider = new Slider();
+    $slider->removeSlider($slideId);
+}

@@ -8,26 +8,28 @@ $sliders = $slider->getSlider();
 
 <!doctype html>
 <html dir="rtl" lang="en">
-  <head>
-    <title>قالب سایت شخصی مربی :: دریافت شده از وب روبیک</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- style -->
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- style -->
-  </head>
-  <!--here we use text align rtl in css  -->
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" class="rtla">
-  
+
+<head>
+  <title>قالب سایت شخصی مربی :: دریافت شده از وب روبیک</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- style -->
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- style -->
+</head>
+<!--here we use text align rtl in css  -->
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" class="rtla">
+
   <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
@@ -44,15 +46,15 @@ $sliders = $slider->getSlider();
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar js-sticky-header site-navbar-target " role="banner"  >
+    <header class="site-navbar js-sticky-header site-navbar-target " role="banner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-xl-2 ">
             <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">مربی<span class="text-primary">.</span> </a></h1>
           </div>
-            <!-- start navbar -->
-          <div class="col-12 col-md-10 d-none d-xl-block " >
-            <nav class="site-navigation position-relative text-right flt-lft navcol" role="navigation" >
+          <!-- start navbar -->
+          <div class="col-12 col-md-10 d-none d-xl-block ">
+            <nav class="site-navigation position-relative text-right flt-lft navcol" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">خانه</a></li>
@@ -73,7 +75,7 @@ $sliders = $slider->getSlider();
                     </li>
                   </ul>
                 </li>
-                
+
                 <li><a href="#training-section" class="nav-link">آموزشهای ما</a></li>
                 <li><a href="#services-section" class="nav-link">سرویس های ما</a></li>
                 <li><a href="#contact-section" class="nav-link">ارتباط با ما</a></li>
@@ -86,7 +88,7 @@ $sliders = $slider->getSlider();
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-left"><span class="icon-menu h3"></span></a></div>
         </div>
       </div>
-      
+
     </header>
 
     <section class="site-blocks-cover overflow-hidden ">
@@ -96,29 +98,29 @@ $sliders = $slider->getSlider();
 
             <div class="row">
               <!-- here we use margin-top:-12% -->
-              <div class="col-lg-12" >
+              <div class="col-lg-12">
                 <!-- in this div use text align rtl in h1 and p-->
-                <h1 class="rtla">ما میخواهیم  <span class="typed-words"></span></h1>
+                <h1 class="rtla">ما میخواهیم <span class="typed-words"></span></h1>
                 <p class="rtla">هر چه نیاز داشته باشید ما در یک سایت به صورت جامع برایتان فراهم کردیم <a href="#">ارتباط با ما</a></p>
               </div>
-              
+
             </div>
           </div>
-          
+
         </div>
       </div>
-    </section> 
+    </section>
     <!-- end section header -->
     <!-- start section slider -->
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-12 margin-tp"  dir="ltr"  >
+          <div class="col-12 margin-tp" dir="ltr">
             <div class="slide-one-item home-slider owl-carousel" style="float: right !important;">
-              <?php foreach($sliders as $slider){ ?>
-            <img src="admin/sliderImg/<?php echo $slider['imgName']; ?>" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
-          <?php } ?>  
-          </div>
+              <?php foreach ($sliders as $slider) { ?>
+                <img src="admin/sliderImg/<?php echo $slider['imgName']; ?>" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
+              <?php } ?>
+            </div>
           </div>
         </div>
       </div>
@@ -133,12 +135,12 @@ $sliders = $slider->getSlider();
           </div>
           <div class="col-md-6 mb-5">
             <p>منابع انسانی یا به عبارت بهتر سرمایه‌های انسانی از مهم‌ترین عوامل تولید در یک سازمان به شمار می‌رود .
-                از همین رو انگیزش در کارکنان و مسائل مربوط به آن، دلمشغولی‌های مهم مدیران سازمان و شرکت‌های عصر حاضر است.
-                چالش اصلی یک سازمان در ایجاد انگیزه کارکنان تعادل میان اهداف آن سازمان و ارزش‌های شخصی کارکنان آن است.</p>
+              از همین رو انگیزش در کارکنان و مسائل مربوط به آن، دلمشغولی‌های مهم مدیران سازمان و شرکت‌های عصر حاضر است.
+              چالش اصلی یک سازمان در ایجاد انگیزه کارکنان تعادل میان اهداف آن سازمان و ارزش‌های شخصی کارکنان آن است.</p>
             <p>انگیزه کارکنان همیشه مورد بحث صاحبان مشاغل بوده
-                و با این موضوع همیشه چالش داشته اند که از زوایای زیادی
-                می توان به این مقوله پرداخت بهترین روش ایجاد انگیزه کارکنان،
-                باید کاری کرد که خود کارکنان از درون انگیزه داشته باشند.</p>
+              و با این موضوع همیشه چالش داشته اند که از زوایای زیادی
+              می توان به این مقوله پرداخت بهترین روش ایجاد انگیزه کارکنان،
+              باید کاری کرد که خود کارکنان از درون انگیزه داشته باشند.</p>
             <p>افرادی که بابت مشاوره در ارتباط هستم و همینطور از طریق پل ارتباطی سایت ذهن ایده آل و ایمیل دریافتم که ۹۷% مردم مشکل هدف گذاری دارند. اهدافی را برای خودشان مشخص می کنند اما در زمان اجرای آن به مشکل بر می خورند،مشکل در اینجاست که نمی دانند و نمی توانند هدف گذاری کوتاه مدت، میان مدت، بلند مدت داشته باشند.</p>
             <p class="mt-5"><img src="images/signature.jpg" alt="Free website template by Free-Template.co" class="img-fluid w-25"></p>
           </div>
@@ -180,7 +182,7 @@ $sliders = $slider->getSlider();
           </div>
           <div class="col-lg-3 text-right">
             <img src="images/person_2.jpg" alt="Free Website Template by Free-Template.co" class="rounded-circle img-fluid w-50 mb-4 rtla">
-            <h3 class="h4 text-black rtla" >پویا</h3>
+            <h3 class="h4 text-black rtla">پویا</h3>
             <p>آموزشهای یادگرفته شده در این دوره منجر به پیشرفت شغلی و امکانات فوق العاده این دوره باعث شر که دوره راحت تر سپری شود و دوستانی بسیار مفید در این دوره اضافه شدند</p>
             <p>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
@@ -225,7 +227,7 @@ $sliders = $slider->getSlider();
           </div>
         </div>
 
-        <div class="nonloop-block-13 owl-style owl-carousel" dir="ltr" >
+        <div class="nonloop-block-13 owl-style owl-carousel" dir="ltr">
           <div class="training">
             <figure class="mb-4"><img src="images/coach_1_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
             <h3 class="text-black mb-3">تربیت مربی زندگی</h3>
@@ -266,7 +268,7 @@ $sliders = $slider->getSlider();
       </div>
     </section>
     <!-- end section education -->
-    
+
     <!-- start section services -->
     <section class="site-section" id="services-section" dir="ltr">
       <div class="container">
@@ -329,18 +331,18 @@ $sliders = $slider->getSlider();
           </div>
         </div>
         <div class="row">
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_3_sm.jpg" data-fancybox="gal"><img src="images/coach_3_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_3_sm.jpg" data-fancybox="gal"><img src="images/coach_3_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_3_sm.jpg" data-fancybox="gal"><img src="images/coach_3_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_3_sm.jpg" data-fancybox="gal"><img src="images/coach_3_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_1_sm.jpg" data-fancybox="gal"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
+          <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/coach_2_sm.jpg" data-fancybox="gal"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
         </div>
       </div>
     </section>
@@ -348,13 +350,13 @@ $sliders = $slider->getSlider();
     <!-- start section good comment -->
     <section class="site-section" id="testimonials-section" data-aos="fade" dir="ltr">
       <div class="container">
-        
+
         <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-lg-6 text-center mb-5">
             <h2 class="text-black mb-2">کارآموزان خوشنود ما</h2>
           </div>
         </div>
-        <div  data-aos="fade-up" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-delay="200">
           <div class="owl-carousel owl-style owl-carousel-one no-owl-nav">
             <div>
               <div class="block-testimony-1 text-center">
@@ -370,7 +372,7 @@ $sliders = $slider->getSlider();
 
             <div>
               <div class="block-testimony-1 text-center">
-                <blockquote class="mb-4" dir="rtl"> 
+                <blockquote class="mb-4" dir="rtl">
                   <p>&ldquo;سلام ممنونم بخاطر کار فوق العاده قشنگی که انجام دادید،شما بسیار عالی و با برنامه ریزی دقیق سفارش ها را تحویل می دهید . سه تا محصول سفارش دادم و واقعا هر سه بی نظیر و زیبا بود. با سپاس &rdquo;</p>
                 </blockquote>
                 <figure>
@@ -392,7 +394,7 @@ $sliders = $slider->getSlider();
               </div>
             </div>
             <div>
-              <div class="block-testimony-1 text-center" >
+              <div class="block-testimony-1 text-center">
 
                 <blockquote class="mb-4" dir="rtl">
                   <p>&ldquo;سلام ممنونم بخاطر کار فوق العاده قشنگی که انجام دادید،شما بسیار عالی و با برنامه ریزی دقیق سفارش ها را تحویل می دهید . سه تا محصول سفارش دادم و واقعا هر سه بی نظیر و زیبا بود. با سپاس &rdquo;</p>
@@ -402,7 +404,7 @@ $sliders = $slider->getSlider();
                   <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
                 <h3 class="font-size-20 mb-4 text-black">علیرضا مهدوی</h3>
-               
+
               </div>
             </div>
 
@@ -416,13 +418,13 @@ $sliders = $slider->getSlider();
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-lg-6 text-center mb-5">
-            
+
             <h2 class="text-black mb-2">وبلاگ</h2>
             <p>حالا که اهداف بزرگ خود را تشخیص دادید، نوبت به رسیدگی کارهای کوچک است. واضح است که برای رسیدن به اهداف خود نیاز به پله‌هایی دارید. لیستی از تمام پله‌های مورد نیاز را پیدا کنید. به این نکته توجه داشته باشید که جزئیات را هم در لیست خود قید کنید.</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 mb-4" data-aos="fade-up"  data-aos-delay="">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
             <div class="d-lg-flex blog-entry">
               <figure class="mr-4">
                 <a href="single.html"><img src="images/coach_1_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
@@ -435,7 +437,7 @@ $sliders = $slider->getSlider();
               </div>
             </div>
           </div>
-          <div class="col-md-6 mb-4" data-aos="fade-up"  data-aos-delay="100">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="d-lg-flex blog-entry">
               <figure class="mr-4">
                 <a href="single.html"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
@@ -449,7 +451,7 @@ $sliders = $slider->getSlider();
             </div>
           </div>
 
-          <div class="col-md-6 mb-4" data-aos="fade-up"  data-aos-delay="">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
             <div class="d-lg-flex blog-entry">
               <figure class="mr-4">
                 <a href="single.html"><img src="images/coach_3_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
@@ -462,7 +464,7 @@ $sliders = $slider->getSlider();
               </div>
             </div>
           </div>
-          <div class="col-md-6 mb-4" data-aos="fade-up"  data-aos-delay="100">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="d-lg-flex blog-entry">
               <figure class="mr-4">
                 <a href="single.html"><img src="images/coach_2_sm.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
@@ -532,13 +534,13 @@ $sliders = $slider->getSlider();
               </div>
             </form>
           </div>
-          
+
         </div>
       </div>
     </div>
     <!-- end section send contact us -->
     <!-- start section footer -->
-    
+
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -585,15 +587,17 @@ $sliders = $slider->getSlider();
             <div class="border-top pt-5 rtla">
               <p class="copyright">
                 <small>
-                <!-- Link back to webrubik can't be removed.  -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com/" target="_blank" >colorlib</a></br>
-                فارسی و راست چین شده &copy توسط علیرضا <i class="icon-heart text-danger" aria-hidden="true"></i>  از اعضای تیم <a href="https://webrubik.com/" target="_blank" > وب روبیک</a>
-                <!-- Link back to webrubik can't be removed.  -->
+                  <!-- Link back to webrubik can't be removed.  -->
+                  Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                  </script> All rights reserved | This template is made by <a href="https://colorlib.com/" target="_blank">colorlib</a></br>
+                  فارسی و راست چین شده &copy توسط علیرضا <i class="icon-heart text-danger" aria-hidden="true"></i> از اعضای تیم <a href="https://webrubik.com/" target="_blank"> وب روبیک</a>
+                  <!-- Link back to webrubik can't be removed.  -->
                 </small>
               </p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -612,20 +616,21 @@ $sliders = $slider->getSlider();
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
-  
+
   <script src="js/typed.js"></script>
   <script>
-  var typed = new Typed('.typed-words', {
-    strings: ["بهترین مربی انگیزشی باشیم","بهترین سخنران در آموزش باشیم","بهترین کارآفرین باشیم", " بهترین مربی زندگی باشیم"],
-  typeSpeed: 80,
-  backSpeed: 80,
-  backDelay: 4000,
-  startDelay: 1000,
-  loop: true,
-  showCursor: true
-  });
+    var typed = new Typed('.typed-words', {
+      strings: ["بهترین مربی انگیزشی باشیم", "بهترین سخنران در آموزش باشیم", "بهترین کارآفرین باشیم", " بهترین مربی زندگی باشیم"],
+      typeSpeed: 80,
+      backSpeed: 80,
+      backDelay: 4000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+    });
   </script>
   <script src="js/main.js"></script>
   <!-- /JS Scripts -->
-  </body>
+</body>
+
 </html>

@@ -2,6 +2,10 @@
 
 require_once "actions.php";
 
+
+$slider = new Slider();
+$sliders = $slider->getSlider();
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="d" style="direction: rtl">
@@ -17,12 +21,12 @@ require_once "actions.php";
 
 
 
-<?php if (Db::$msg) { ?>
-    <div class="alert alert-success text-center mb-0 fontSize576 rounded-0"><?php echo Db::$msg; ?></div>
-<?php } ?>
-<?php if (Db::$error) { ?>
-    <div class="alert alert-danger text-center mb-0 fontSize576 rounded-0"><?php echo Db::$error; ?></div>
-<?php } ?>
+    <?php if (Db::$msg) { ?>
+        <div class="alert alert-success text-center mb-0 fontSize576 rounded-0"><?php echo Db::$msg; ?></div>
+    <?php } ?>
+    <?php if (Db::$error) { ?>
+        <div class="alert alert-danger text-center mb-0 fontSize576 rounded-0"><?php echo Db::$error; ?></div>
+    <?php } ?>
 
 
 
@@ -39,21 +43,41 @@ require_once "actions.php";
             <div class="card col-12  col-md-9 shadow-sm p-0">
                 <div class="card-header ">اسلایدر</div>
 
-                <form action="adminSlider.php" method="post" enctype="multipart/form-data">
-                    <ul class="list-group-flush ps-0">
-                        <li class="list-group-item">
-                            تصویر مورد نظر:
-                            <input type="file" name="sliderPhoto" class="form-control mt-1">
-                        </li>
+                <div class="">
+                    <form action="adminSlider.php" method="post" enctype="multipart/form-data">
+                        <ul class="list-group-flush ps-0">
+                            <li class="list-group-item">
+                                تصویر مورد نظر:
+                                <input type="file" name="sliderPhoto" class="form-control mt-1">
+                            </li>
 
-                        <li class="list-group-item float-left">
-                            <input type="submit" class="btn btn-success mt-1 float-left" name="addSliderPhoto" value="افزودن تصویر اسلایدر">
-                        </li>
-                </form>
+                            <li class="list-group-item float-left">
+                                <input type="submit" class="btn btn-success mt-1 float-left" name="addSliderPhoto" value="افزودن تصویر اسلایدر">
+                            </li>
+                    </form>
+                </div>
+
+                <hr>
+                <div class="row m-3">
+                    <?php foreach ($sliders as $slider) { ?>
+
+                        <div class="col-6 card">
+                            <div class="card-body">
+                                <img src="sliderImg/<?php echo $slider['imgName']; ?>" class="card-img-top">
+                                <a href="?deleteSlideId=<?php echo $slider['id']; ?>" class="btn btn-danger w-100">حذف تصویر اسلاید</a>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+
+                </div>
 
             </div>
 
+
         </div>
+
+    </div>
     </div>
 
 
