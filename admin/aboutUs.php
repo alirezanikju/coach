@@ -3,8 +3,8 @@
 require_once "actions.php";
 
 
-$slider = new Slider();
-$sliders = $slider->getSlider();
+// $aboutUs = new AboutUs;
+// $aboutUsTxt = $aboutUs->getAboutUsTxt();
 
 ?>
 <!DOCTYPE html>
@@ -42,34 +42,35 @@ $sliders = $slider->getSlider();
                 </ul>
             </div>
             <div class="card col-12  col-md-9 shadow-sm p-0">
-                <div class="card-header ">اسلایدر</div>
+                <div class="card-header ">درباره ما</div>
 
                 <div class="">
-                    <form action="adminSlider.php" method="post" enctype="multipart/form-data">
+                    <form action="aboutUs.php" method="post">
                         <ul class="list-group-flush ps-0">
                             <li class="list-group-item">
-                                تصویر مورد نظر:
-                                <input type="file" name="sliderPhoto" class="form-control mt-1">
+                                متن مورد نظر درباره بخش درباره ما:
+                                <textarea class="form-control mt-1" name="aboutUsTxt" rows="5" cols="20">
+                                        </textarea>
                             </li>
 
                             <li class="list-group-item float-left">
-                                <input type="submit" class="btn btn-success mt-1 float-left" name="addSliderPhoto" value="افزودن تصویر اسلایدر">
+                                <input type="submit" class="btn btn-success mt-1 float-left" name="addAboutUs" value="افزودن متن درباره ما">
                             </li>
                     </form>
                 </div>
 
                 <hr>
                 <div class="row m-3">
-                    <?php foreach ($sliders as $slider) { ?>
+                    <!-- <?php foreach ($sliders as $slider) { ?> -->
 
-                        <div class="col-6 card">
+                    <!-- <div class="col-6 card">
                             <div class="card-body">
                                 <img src="sliderImg/<?php echo $slider['imgName']; ?>" class="card-img-top">
                                 <a href="?deleteSlideId=<?php echo $slider['id']; ?>" class="btn btn-danger w-100">حذف تصویر اسلاید</a>
                             </div>
                         </div>
 
-                    <?php } ?>
+                    <?php } ?> -->
 
                 </div>
 

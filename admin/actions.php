@@ -12,6 +12,8 @@ if(isset($_POST['adminLogin'])){
 
 }
 
+
+//add slider
 if(isset($_POST['addSliderPhoto'])){
     $imgName = $_FILES['sliderPhoto']['name'];
     $imgTmp = $_FILES['sliderPhoto']['tmp_name'];
@@ -24,9 +26,32 @@ if(isset($_POST['addSliderPhoto'])){
 }
 
 
+//delete slider
 if(isset($_GET['deleteSlideId'])){
     $slideId = $_GET['deleteSlideId'];
 
     $slider = new Slider();
     $slider->removeSlider($slideId);
 }
+
+
+
+//about us
+if(isset($_POST['addAboutUs'])){
+    $aboutUsTxt = $_POST['aboutUsTxt'];
+    $aboutUs = new AboutUs;
+    $aboutUs->addAboutUsTxt($aboutUsTxt);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
