@@ -44,7 +44,25 @@ if(isset($_POST['addAboutUs'])){
 }
 
 
+//add event
+if(isset($_POST['addEvent'])){
+    $eventName = $_POST['eventName'];
+    $eventCity = $_POST['eventCity'];
+    $eventPlace = $_POST['eventPlace'];
+    $eventDate = $_POST['eventDate'];
 
+    $addEvent = new Events();
+    $addEvent -> addEvent($eventName,$eventCity,$eventPlace,$eventDate);
+}
+
+
+//delete Event
+if(isset($_GET['deleteEventId'])){
+    $deleteEventId = $_GET['deleteEventId'];
+
+    $rmEvent = new Events();
+    $rmEvent -> removeEvent($deleteEventId);
+}
 
 
 

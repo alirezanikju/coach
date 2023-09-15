@@ -6,6 +6,9 @@ $sliders = $slider->getSlider();
 
 $aboutUs = new AboutUs;
 $aboutUsTxt = $aboutUs->getAboutUsTxt();
+
+$events = new Events();
+$events = $events->getEvent();
 ?>
 
 
@@ -120,9 +123,11 @@ $aboutUsTxt = $aboutUs->getAboutUsTxt();
         <div class="row">
           <div class="col-12 margin-tp" dir="ltr">
             <div class="slide-one-item home-slider owl-carousel" style="float: right !important;">
+
               <?php foreach ($sliders as $slider) { ?>
                 <img src="admin/sliderImg/<?php echo $slider['imgName']; ?>" alt="Free Website Template by Free-Templat.co" class="img-fluid img">
               <?php } ?>
+
             </div>
           </div>
         </div>
@@ -137,33 +142,27 @@ $aboutUsTxt = $aboutUs->getAboutUsTxt();
             <h2 class="text-black">سلام دوستان من علیرضا سرمایه گذار این کسب و کار هستم</h2>
           </div>
           <div class="col-md-6 mb-5">
-            <?php foreach($aboutUsTxt as $txt){ ?>
-            <p>منابع انسانی یا به عبارت بهتر سرمایه‌های انسانی از مهم‌ترین عوامل تولید در یک سازمان به شمار می‌رود .
-              از همین رو انگیزش در کارکنان و مسائل مربوط به آن، دلمشغولی‌های مهم مدیران سازمان و شرکت‌های عصر حاضر است.
-              چالش اصلی یک سازمان در ایجاد انگیزه کارکنان تعادل میان اهداف آن سازمان و ارزش‌های شخصی کارکنان آن است.
-            </p>
-              <?php } ?>
+            <?php foreach ($aboutUsTxt as $txt) { ?>
+              <p>منابع انسانی یا به عبارت بهتر سرمایه‌های انسانی از مهم‌ترین عوامل تولید در یک سازمان به شمار می‌رود .
+                از همین رو انگیزش در کارکنان و مسائل مربوط به آن، دلمشغولی‌های مهم مدیران سازمان و شرکت‌های عصر حاضر است.
+                چالش اصلی یک سازمان در ایجاد انگیزه کارکنان تعادل میان اهداف آن سازمان و ارزش‌های شخصی کارکنان آن است.
+              </p>
+            <?php } ?>
             <p>
           </div>
           <div class="col-md-5 ml-auto">
             <h2 class="text-black mb-4 h6">رویداد های اجرا شده در این دوره</h2>
             <ul class="list-unstyled">
-              <li class="mb-4">
-                <h3 class="text-black m-0">جلسه ساختار زندگی</h3>
-                <span class="text-muted">تهران ، برج میلاد ، آذر۹۸</span>
-              </li>
-              <li class="mb-4">
-                <h3 class="text-black m-0">کسب مهارت بهتر زیستن</h3>
-                <span class="text-muted">شیراز ، تالار حافظ ، مهر ۹۷</span>
-              </li>
-              <li class="mb-4">
-                <h3 class="text-black m-0">کسب مهارت انگیزشی</h3>
-                <span class="text-muted">اصفهان ، شهر کاغذی ، فروردین ۹۸ </span>
-              </li>
-              <li class="mb-4">
-                <h3 class="text-black m-0">ساختار زندگی زیبا </h3>
-                <span class="text-muted">تهران ، برج میلاد ، خرداد۹۸</span>
-              </li>
+
+              <?php foreach ($events as $event) { ?>
+
+                <li class="mb-4">
+                  <h3 class="text-black m-0"><?php echo $event['eventName']  ?></h3>
+                  <span class="text-muted"><?php echo $event['eventCity']; ?> ، <?php echo $event['eventPlace']; ?> ، <?php echo $event['eventDate'] ?></span>
+                </li>
+
+              <?php } ?>
+
             </ul>
           </div>
         </div>
