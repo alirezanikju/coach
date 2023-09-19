@@ -65,6 +65,28 @@ if(isset($_GET['deleteEventId'])){
 }
 
 
+//add learn item
+if(isset($_POST['addLearn'])){
+
+    $learnImgName = $_FILES['learnPhoto']['name'];
+    $learnImgTmp = $_FILES['learnPhoto']['tmp_name'];
+    $learnImgType = $_FILES['learnPhoto']['type'];
+
+    $learnTitle = $_POST['learnTitle'];
+    $aboutLearn = $_POST['aboutLearn'];
+
+    $learn = new Learn();
+    $learn->insertLearnItem($learnImgName, $learnImgTmp,$learnImgType,$learnTitle,$aboutLearn);
+}
+
+
+//remove learn
+if(isset($_GET['deleteLearnId'])){
+    $learnId = $_GET['deleteLearnId'];
+
+    $learn = new Learn();
+    $learn -> removeLearn($learnId);
+}
 
 
 

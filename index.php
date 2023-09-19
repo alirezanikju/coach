@@ -9,6 +9,9 @@ $aboutUsTxt = $aboutUs->getAboutUsTxt();
 
 $events = new Events();
 $events = $events->getEvent();
+
+$learns = new Learn();
+$learns = $learns->getLearn();
 ?>
 
 
@@ -228,41 +231,14 @@ $events = $events->getEvent();
         </div>
 
         <div class="nonloop-block-13 owl-style owl-carousel" dir="ltr">
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_1_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">تربیت مربی زندگی</h3>
-            <p>هر چه در مورد زندگی شما لازم دارید را ما برایتان در این مجموعه فراهم کردیم که در آخر یک زندگی پر از آرامش و هدفمند و سودمند داشته باشید </p>
-          </div>
 
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_2_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">آشکار کردن پتانسیل شما</h3>
-            <p>در میانه­‌ی راه، به این فکر کنید که از اول اصلا چرا وارد این راه شدید؟ علل شخصی، منطقی و مهمی که باعث شدند بخواهید به این هدف برسید چه بودند؟</p>
-          </div>
-
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_3_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">ایجاد یک فرصت</h3>
-            <p>هرگاه در زندگی برای رسیدن به هدفی برنامه‌­ریزی ­کنید، قطعا با مشکلات و سختی‌­هایی روبه‌رو خواهید شد. این مشکلات و سختی‌­ها باعث می‌­شوند انگیزه­‌ی خود را از دست بدهید</p>
-          </div>
-
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_1_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">آموزش زندگی بهتر</h3>
-            <p>شور و انگیزه، نوعی انرژی است که از درون ما نشات می‌گیرد و می‌تواند ما را به موفقیت و رشد فردی برساند. همه‌ی ما در زندگی این حس را حتی به شکل کوتاه‌مدت تجربه کرده‌ایم. </p>
-          </div>
-
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_2_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">انگیزه در کار</h3>
-            <p>هرگاه در زندگی برای رسیدن به هدفی برنامه‌­ریزی ­کنید، قطعا با مشکلات و سختی‌­هایی روبه‌رو خواهید شد. این مشکلات و سختی‌­ها باعث می‌­شوند انگیزه­‌ی خود را از دست بدهید</p>
-          </div>
-
-          <div class="training">
-            <figure class="mb-4"><img src="images/coach_3_sm.jpg" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">تبدیل یک فرصت</h3>
-            <p>هر آدمی در دوره­‌ای از زندگی دچار رکود می­‌شود. درک علت از دست دادن انگیزه و اقدام برای رهایی هرچه سریع­‌تر از شر این رکود، کمک می­‌کند تا به موفقیت‌­های بزرگی که در انتظار شما هستند، دست پیدا کنید.</p>
-          </div>
+          <?php foreach ($learns as $learn) { ?>
+            <div class="training">
+              <figure class="mb-4"><img src="admin/learnImg/<?php echo $learn['learnphoto']; ?>" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
+              <h3 class="text-black mb-3"><?php echo $learn['learntitle'];  ?></h3>
+              <p><?php echo $learn['aboutLearn']; ?></p>
+            </div>
+          <?php } ?>
         </div>
 
       </div>
