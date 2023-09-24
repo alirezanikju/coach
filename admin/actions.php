@@ -110,3 +110,32 @@ if(isset($_GET['deleteServiceId'])){
     $Service = new Service();
     $Service -> removeService($ServiceId);
 }
+
+
+
+
+//add gallery
+if(isset($_POST['addgallery'])){
+
+    $galleryImgName = $_FILES['galleryPhoto']['name'];
+    $galleryImgTmp = $_FILES['galleryPhoto']['tmp_name'];
+    $galleryImgType = $_FILES['galleryPhoto']['type'];
+
+    $gallery = new Gallery();
+    $gallery->insertGallery($galleryImgName,$galleryImgTmp,$galleryImgType);
+}
+
+
+//remove gallery
+if(isset($_GET['deletegalleryId'])){
+    $galleryId = $_GET['deletegalleryId'];
+
+    $deleteGallery = new Gallery();
+    $deleteGallery -> removeGallery($galleryId);
+}
+
+
+
+
+
+
