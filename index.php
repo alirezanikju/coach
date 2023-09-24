@@ -12,6 +12,10 @@ $events = $events->getEvent();
 
 $learns = new Learn();
 $learns = $learns->getLearn();
+
+
+$service = new Service();
+$service = $service -> getService();
 ?>
 
 
@@ -256,42 +260,15 @@ $learns = $learns->getLearn();
         </div>
 
         <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
+
+        <?php foreach($service as $item){ ?>
           <div class="service">
             <div class="icon"><span class="flaticon-badge display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">بهتر زندگی کردن</h3>
-            <p>توانمندی، به شما قدرت و اعتماد به نفس می‌دهد تا شایستگی‌های نهفته‌ی خود را بیدار کنید. لازمه‌‌ی داشتن اعتماد به نفس این است که شما خود و نیازهایتان را بشناسید.</p>
+            <h3 class="text-black mb-3"><?php echo $item['serviceTitle'];  ?></h3>
+            <p><?php echo $item['aboutService']; ?></p>
           </div>
-
-          <div class="service">
-            <div class="icon"><span class="flaticon-target display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">کسب یک فرصت </h3>
-            <p> وقتی شما فرآیندمحور هستید و خود را تا رسیدن به هدف نهایی دور احساس نمی‌کنید، زمان به خودی خود می‌گذرد و در نهایت شما به هدف خود خواهید رسید.</p>
-          </div>
-
-          <div class="service">
-            <div class="icon"><span class="flaticon-agreement display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">ایجاد انگیزه فردی</h3>
-            <p>طبیعتا، "انگیزه" یک شی نیست که بتوان به شکل ملموس آن را به دست آورد. بلکه یکی از حالت‌های روحی است که شور و شوق درونی شما را درگیر خود خواهد کرد.</p>
-          </div>
-
-          <div class="service">
-            <div class="icon"><span class="flaticon-line-chart display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">تربیت مربی زندگی</h3>
-            <p>آگاهی ذهنی از شرایط به این معنا نیست که به ترافیک وحشتناک مسیر رفتن به محل کار، فکر کنید یا وقتی رئیس شما ناراحتی و خشم خود را نسبت به شما و دیگر کارمندان ابراز می‌کند، موضع بگیرید.</p>
-          </div>
-
-          <div class="service">
-
-            <div class="icon"><span class="flaticon-target-1 display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">ایجاد زندگی زیبا</h3>
-            <p> وقتی شما فرآیندمحور هستید و خود را تا رسیدن به هدف نهایی دور احساس نمی‌کنید، زمان به خودی خود می‌گذرد و در نهایت شما به هدف خود خواهید رسید.</p>
-          </div>
-
-          <div class="service">
-            <div class="icon"><span class="flaticon-bar-chart display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">بهتر زیستن</h3>
-            <p>آگاهی ذهنی از شرایط به این معنا نیست که به ترافیک وحشتناک مسیر رفتن به محل کار، فکر کنید یا وقتی رئیس شما ناراحتی و خشم خود را نسبت به شما و دیگر کارمندان ابراز می‌کند، موضع بگیرید.</p>
-          </div>
+          <?php } ?>
+          
         </div>
 
       </div>

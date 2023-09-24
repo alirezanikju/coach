@@ -90,8 +90,23 @@ if(isset($_GET['deleteLearnId'])){
 
 
 
+//add Service
+if(isset($_POST['addService'])){
+
+    $serviceTitle = $_POST['serviceTitle'];
+    $aboutService = $_POST['aboutService'];
+
+
+    $addService = new Service();
+    $addService -> insertService($serviceTitle,$aboutService);
+}
 
 
 
+//remove Service
+if(isset($_GET['deleteServiceId'])){
+    $ServiceId = $_GET['deleteServiceId'];
 
-
+    $Service = new Service();
+    $Service -> removeService($ServiceId);
+}
