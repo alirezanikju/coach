@@ -19,6 +19,9 @@ $service = $service -> getService();
 
 $gallery = new Gallery();
 $gallery = $gallery -> getgallery();
+
+$getStudentComment = new StudentComment();
+$getStudentComment = $getStudentComment -> getStudentComment();
 ?>
 
 
@@ -153,9 +156,8 @@ $gallery = $gallery -> getgallery();
           </div>
           <div class="col-md-6 mb-5">
             <?php foreach ($aboutUsTxt as $txt) { ?>
-              <p>منابع انسانی یا به عبارت بهتر سرمایه‌های انسانی از مهم‌ترین عوامل تولید در یک سازمان به شمار می‌رود .
-                از همین رو انگیزش در کارکنان و مسائل مربوط به آن، دلمشغولی‌های مهم مدیران سازمان و شرکت‌های عصر حاضر است.
-                چالش اصلی یک سازمان در ایجاد انگیزه کارکنان تعادل میان اهداف آن سازمان و ارزش‌های شخصی کارکنان آن است.
+              <p>
+                <?php echo $txt['aboutUsTxt'] ?>
               </p>
             <?php } ?>
             <p>
@@ -305,55 +307,20 @@ $gallery = $gallery -> getgallery();
         </div>
         <div data-aos="fade-up" data-aos-delay="200">
           <div class="owl-carousel owl-style owl-carousel-one no-owl-nav">
+            <?php foreach ($getStudentComment as $studentComment){  ?>
             <div>
               <div class="block-testimony-1 text-center">
                 <blockquote class="mb-4" dir="rtl">
-                  <p>&ldquo;سپاس سلام ضمن عرض خسته نباشید به شما، سپاس فراوان دارم به خاطر برپایی این سایت ارزنده. خدماتی که ارایه می‌دهید بسیار زیبا و دلپسند هست و بنده به شخصه مشتری پر و پا قرص شما خواهم بود. این حرکت شما جوانه‌های محبت و عشق را در تار و پود جامعه می‌پراکند. با احترام و امتنان فراوان&rdquo;</p>
+                  <p>&ldquo; <?php echo $studentComment['studentComment']; ?> &rdquo;</p>
                 </blockquote>
                 <figure>
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
+                  <img src="admin/bestStudent/<?php echo $studentComment['studentImgName']; ?>" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
-                <h3 class="font-size-20 text-black">علی مرادی</h3>
+                <h3 class="font-size-20 text-black"><?php echo $studentComment['studentName']; ?></h3>
               </div>
-            </div>
+          </div>
 
-            <div>
-              <div class="block-testimony-1 text-center">
-                <blockquote class="mb-4" dir="rtl">
-                  <p>&ldquo;سلام ممنونم بخاطر کار فوق العاده قشنگی که انجام دادید،شما بسیار عالی و با برنامه ریزی دقیق سفارش ها را تحویل می دهید . سه تا محصول سفارش دادم و واقعا هر سه بی نظیر و زیبا بود. با سپاس &rdquo;</p>
-                </blockquote>
-                <figure>
-                  <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
-                </figure>
-                <h3 class="font-size-20 mb-4 text-black">پویا جلالی</h3>
-              </div>
-            </div>
-
-            <div>
-              <div class="block-testimony-1 text-center">
-                <blockquote class="mb-4" dir="rtl">
-                  <p>&ldquo;سپاس سلام ضمن عرض خسته نباشید به شما، سپاس فراوان دارم به خاطر برپایی این سایت ارزنده. خدماتی که ارایه می‌دهید بسیار زیبا و دلپسند هست و بنده به شخصه مشتری پر و پا قرص شما خواهم بود. این حرکت شما جوانه‌های محبت و عشق را در تار و پود جامعه می‌پراکند. با احترام و امتنان فراوان&rdquo;</p>
-                </blockquote>
-                <figure>
-                  <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
-                </figure>
-                <h3 class="font-size-20 text-black">رویا عرب زاده</h3>
-              </div>
-            </div>
-            <div>
-              <div class="block-testimony-1 text-center">
-
-                <blockquote class="mb-4" dir="rtl">
-                  <p>&ldquo;سلام ممنونم بخاطر کار فوق العاده قشنگی که انجام دادید،شما بسیار عالی و با برنامه ریزی دقیق سفارش ها را تحویل می دهید . سه تا محصول سفارش دادم و واقعا هر سه بی نظیر و زیبا بود. با سپاس &rdquo;</p>
-                </blockquote>
-
-                <figure>
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
-                </figure>
-                <h3 class="font-size-20 mb-4 text-black">علیرضا مهدوی</h3>
-
-              </div>
-            </div>
+          <?php } ?>
 
           </div>
         </div>

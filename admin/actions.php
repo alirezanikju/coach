@@ -138,4 +138,27 @@ if(isset($_GET['deletegalleryId'])){
 
 
 
+//add student Comments
+if(isset($_POST['addStudentComment'])){
+
+    $studentImgName = $_FILES['studentImg']['name'];
+    $studentImgTmp = $_FILES['studentImg']['tmp_name'];
+    $studentImgType = $_FILES['studentImg']['type'];
+
+    $studentName = $_POST['studentName'];
+    $studentComment = $_POST['studentComment'];
+
+    $stuComment = new StudentComment();
+    $stuComment->insertStudentComment($studentImgName,$studentImgTmp,$studentImgType,$studentName,$studentComment);
+}
+
+
+
+//remove student Comment
+if(isset($_GET['deleteStudentCommentId'])){
+    $deleteStudentCommentId = $_GET['deleteStudentCommentId'];
+
+    $rmStudentComment = new StudentComment();
+    $rmStudentComment -> removeStudentComment($deleteStudentCommentId);
+}
 
