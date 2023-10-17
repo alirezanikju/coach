@@ -162,3 +162,39 @@ if(isset($_GET['deleteStudentCommentId'])){
     $rmStudentComment -> removeStudentComment($deleteStudentCommentId);
 }
 
+
+//add blog name and index img
+if(isset($_POST['addBlog'])){
+
+    $blogImgName = $_FILES['blogImg']['name'];
+    $blogImgTmp = $_FILES['blogImg']['tmp_name'];
+    $blogImgType = $_FILES['blogImg']['type'];
+
+    $blogTitle = $_POST['blogName'];
+
+    $blog = new Blog();
+    $blog->insertBlogName($blogImgName, $blogImgTmp,$blogImgType,$blogTitle);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
